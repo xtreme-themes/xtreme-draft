@@ -1,0 +1,756 @@
+/**
+ * Xtreme Draft Stylesheet
+ *
+ * @copyright       Copyright 2014 Inpsyde GmbH
+ * @license         see http://marketpress.com/agb/
+ * @link            http://marketpress.com/product/xtreme/
+ * @package         xtreme-one
+**/
+@media all {
+    /** Layout ****************************************************************/
+    body {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        color: #2a3e32;
+        border-top: 12px solid #2a3e32
+    }
+    .yamlpage { padding: 0 20px }
+    .design-fullpage {
+        background: #dfd8ce url(../../images/body-24x24.png) top center repeat
+    }
+    .design-blog {
+        background: #2a3e32;
+        border-top: none
+    }
+    .design-blog .yamlpage {
+        background: #dfd8ce url(../../images/body-24x24.png) 50% 12px repeat;
+        padding: 0
+    }
+    #primarynav, #secondarynav { padding: 0 20px }
+    .design-fullpage #primarynav, .design-fullpage #secondarynav { padding: 0 }
+    .design-blog #header, .design-blog #teaser, .design-blog #main,
+    .design-blog #footer, .design-blog #siteinfo { padding-left: 20px; padding-right: 20px }
+
+    #header {
+        background: transparent;
+        border-bottom: 4px solid #2a3e32;
+        min-height: 68px;
+        padding: 24px 0 0 0
+    }
+    .blogtitle { padding-top: 4px; margin-bottom: 16px }
+    .blogtitle a { display: table }
+    .logo .blogtitle { padding: 0; margin-bottom: 20px }
+    .logo #header h1 a, .logo .blogtitle a {
+        background: transparent url(../../images/xtreme-draft.png) top left no-repeat;
+        width: 450px;
+        height: 48px
+    }
+    .description { margin: 20px 0 }
+    .logo .description { margin: 24px 0 20px 0 }
+    #teaser {
+        background: transparent;
+        border-bottom: 4px solid #2a3e32;
+        padding: 0
+    }
+    #main {
+        background: transparent;
+        padding: 48px 0 0 0
+    }
+    .one .ym-cbox { padding: 0 }
+    .two-right .ym-cbox-left, .three-left-right .ym-cbox-left, .two-left .ym-cbox,
+    .three-right-right .ym-cbox-left, .three-right-right .ym-cbox-right,
+    .three-left-left .ym-cbox { padding: 0 0 0 24px }
+    .two-right .ym-cbox, .two-left .ym-cbox-left, .three-left-right .ym-cbox-right,
+    .three-right-right .ym-cbox, .three-left-left .ym-cbox-left,
+    .three-left-left .ym-cbox-right { padding: 0 24px 0 0 }
+    .three-left-right .ym-cbox { padding: 0 24px 0 24px }
+
+    #footer, #siteinfo {
+        background: transparent;
+        border-top: 4px solid #2a3e32;
+        padding: 20px 0 0 0
+    }
+    #siteinfo p { text-align: right }
+
+    .ym-gbox-left { padding-right: 16px }
+    .ym-gbox { padding-right: 8px; padding-left: 8px }
+    .ym-gbox-right  { padding-left: 16px }
+    .ym-g50 .ym-gl { padding-right: 12px }
+    .ym-g50 .ym-gr  { padding-left: 12px }
+
+    .skip_top a span { display: block; text-indent: -9999em }
+    .skip_top  a {
+        display: block;
+        background: url(../../images/sprites.png) 0 -233px no-repeat;
+        width: 17px;
+        height: 16px
+    }
+
+    /** Navigations ***********************************************************/
+    /** shinybuttons **/
+    #primarynav.shinybuttons, #primarynav.shinybuttons .ym-hlist,
+    #secondarynav.shinybuttons, #secondarynav.shinybuttons .ym-hlist { background: #c7321a }
+    .shinybuttons .ym-hlist ul li {
+        font-size: 0.9285em
+    }
+    .shinybuttons .ym-hlist ul li li {
+        font-size: 1em
+    }
+    .shinybuttons .ym-hlist ul li a {
+        padding: 0.55em 1em 0.75em 1em;
+        font-weight: normal;
+        color: #fff;
+        min-width: 1px
+    }
+    .shinybuttons .ym-hlist ul li a:focus, .shinybuttons .ym-hlist ul li a:hover, .shinybuttons .ym-hlist ul li a:active {
+        background: #2a3e32;
+        color: #fff
+    }
+    .shinybuttons .ym-hlist ul li.current_page_item a,
+    .shinybuttons .ym-hlist ul li.current_page_parent a,
+    .shinybuttons .ym-hlist ul li.current-menu-item a,
+    .shinybuttons .ym-hlist ul li.current-cat a,
+    .shinybuttons .ym-hlist ul li.current_page_item a,
+    .shinybuttons .ym-hlist ul li.current_page_item a:hover,
+    .shinybuttons .ym-hlist ul li.current_page_item a:active,
+    .shinybuttons .ym-hlist ul li.current_page_item a:focus,
+    .shinybuttons .ym-hlist ul li.current_page_parent a,
+    .shinybuttons .ym-hlist ul li.current_page_parent a:hover,
+    .shinybuttons .ym-hlist ul li.current_page_parent a:active,
+    .shinybuttons .ym-hlist ul li.current_page_parent a:focus,
+    .shinybuttons .ym-hlist ul li.current-cat a,
+    .shinybuttons .ym-hlist ul li.current-cat a:hover,
+    .shinybuttons .ym-hlist ul li.current-cat a:focus,
+    .shinybuttons .ym-hlist ul li.current-cat a:active,
+    .shinybuttons .ym-hlist ul li.current-menu-item a,
+    .shinybuttons .ym-hlist ul li.current-menu-item a:hover,
+    .shinybuttons .ym-hlist ul li.current-menu-item a:focus,
+    .shinybuttons .ym-hlist ul li.current-menu-item a:active,
+    .shinybuttons .ym-hlist ul li.current-page-ancestor a,
+    .shinybuttons .ym-hlist ul li.current-page-ancestor a:hover,
+    .shinybuttons .ym-hlist ul li.current-page-ancestor a:focus,
+    .shinybuttons .ym-hlist ul li.current-page-ancestor a:active {
+        background: #2a3e32; color: #fff
+    }
+    .shinybuttons .ym-hlist .sf-menu li:hover ul,
+    .shinybuttons .ym-hlist .sf-menu li.sfHover ul {
+        top: 2.8571em; /* match top ul list item height */
+        border-left: 0;
+        border-right: 0;
+        background: transparent
+    }
+    .shinybuttons .ym-hlist .sf-menu ul li {
+        border-bottom: 1px solid #fff;
+        background: #2a3e32;
+        width: 12em
+    }
+    .shinybuttons .ym-hlist .sf-menu ul li a:hover {
+        background: #c7321a;
+        color: #fff
+    }
+    .shinybuttons .ym-hlist .sf-menu ul li li {
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff
+    }
+    .shinybuttons a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+        top: 1em
+    }
+    .shinybuttons .ym-hlist .nav_search { margin-right: 24px }
+    .shinybuttons .ym-hlist ul li.navsearch { padding: .4em 0 }
+    .shinybuttons #s { width: 184px }
+    .shinybuttons #searchsubmit:hover {
+        background: #000;
+        border-color: #000
+    }
+
+    /** superfish navigation**/
+    .superfish { background: #c7321a }
+    .superfish .sf-menu li {
+        background: #c7321a;
+        font-size: 0.9285em;
+        line-height: 1.8461em
+    }
+    .superfish .ym-hlist ul li.navsearch {
+        font-size: 0.9285em;
+        line-height: 1.8461em;
+        padding: .4em 0
+    }
+    .superfish .sf-menu li li,.superfish .sf-menu li li li {
+        background: #c7321a;
+        font-size: 1em
+    }
+    .superfish .sf-menu li:hover ul,
+    .superfish .sf-menu li.sfHover ul {
+        top: 2.8em /* match top ul list item height */
+    }
+    .superfish .sf-menu a {
+        border-left: none;
+        padding: 0.45em 1em
+    }
+    .superfish .sf-menu li.last a { border-right: none }
+    .superfish .sf-menu a, .superfish .sf-menu a:visited  {
+        color: #fff
+    }
+    .superfish .sf-menu li:hover, .superfish .sf-menu li.sfHover,
+    .superfish .sf-menu a:focus, .superfish .sf-menu a:hover, .superfish .sf-menu a:active {
+        background: #2a3e32
+    }
+    .superfish .sf-menu li.current_page_item,
+    .superfish .sf-menu li.current_page_item:hover,
+    .superfish .sf-menu li.current_page_item:active,
+    .superfish .sf-menu li.current_page_item:focus,
+    .superfish .sf-menu li.current_page_parent,
+    .superfish .sf-menu li.current_page_parent:hover,
+    .superfish .sf-menu li.current_page_parent:active,
+    .superfish .sf-menu li.current_page_parent:focus,
+    .superfish .sf-menu li.current-cat,
+    .superfish .sf-menu li.current-cat:hover,
+    .superfish .sf-menu li.current-cat:focus,
+    .superfish .sf-menu li.current-cat:active,
+    .superfish .sf-menu li.current-menu-item,
+    .superfish .sf-menu li.current-menu-item:hover,
+    .superfish .sf-menu li.current-menu-item:focus,
+    .superfish .sf-menu li.current-menu-item:active,
+    .superfish .sf-menu li.current-page-ancestor,
+    .superfish .sf-menu li.current-page-ancestor:hover,
+    .superfish .sf-menu li.current-page-ancestor:focus,
+    .superfish .sf-menu li.current-page-ancestor:active { background: #2a3e32 }
+
+    /** slidingdoor navigation **/
+    #primarynav.slidingdoor, #secondarynav.slidingdoor {
+        background: transparent url(../../images/bg.png) repeat-x bottom;
+        padding-top: .865em;
+        min-height: 36px
+    }
+    .slidingdoor .ym-hlist { background: transparent url(../../images/bg.png) repeat-x bottom }
+    .slidingdoor .ym-hlist li{
+        background: transparent url(../../images/left.png) no-repeat top left;
+        border-bottom: 1px solid #2a3e32;
+        font-size: 0.8571em;
+        line-height: 2em;
+        margin-right: .3em
+    }
+    .slidingdoor .ym-hlist a {
+        padding: 6px 16px 5px 12px
+    }
+    .slidingdoor .ym-hlist a, .slidingdoor .ym-hlist a:visited, .slidingdoor .ym-hlist a:link {
+        background: transparent url(../../images/right.png) no-repeat top right;
+        color: #fff
+    }
+    .slidingdoor .ym-hlist ul li:focus, .slidingdoor .ym-hlist ul li:hover, .slidingdoor .ym-hlist ul li:active {
+        background-color: #e4dbd2;
+        background-position: 0 -150px
+        
+    }
+    .slidingdoor .ym-hlist ul li:focus a, .slidingdoor .ym-hlist ul li:hover a, .slidingdoor .ym-hlist ul li:active a {
+        color: #2a3e32;
+        background-position: 100% -150px
+    }
+    .slidingdoor .ym-hlist li.current_page_item a,
+    .slidingdoor .ym-hlist li.current_page_item a:hover,
+    .slidingdoor .ym-hlist li.current_page_item a:focus,
+    .slidingdoor .ym-hlist li.current_page_item a:active,
+    .slidingdoor .ym-hlist li.current_page_parent a,
+    .slidingdoor .ym-hlist li.current_page_parent a:hover,
+    .slidingdoor .ym-hlist li.current_page_parent a:focus,
+    .slidingdoor .ym-hlist li.current_page_parent a:active,
+    .slidingdoor .ym-hlist li.current-cat a,
+    .slidingdoor .ym-hlist li.current-cat a:active,
+    .slidingdoor .ym-hlist li.current-cat a:focus,
+    .slidingdoor .ym-hlist li.current-cat a:hover,
+    .slidingdoor .ym-hlist li.current-menu-item a,
+    .slidingdoor .ym-hlist li.current-menu-item a:active,
+    .slidingdoor .ym-hlist li.current-menu-item a:focus,
+    .slidingdoor .ym-hlist li.current-menu-item a:hover,
+    .slidingdoor .ym-hlist li.current-page-ancestor a,
+    .slidingdoor .ym-hlist li.current-page-ancestor a:active,
+    .slidingdoor .ym-hlist li.current-page-ancestor a:hover,
+    .slidingdoor .ym-hlist li.current-page-ancestor a:focus {
+        background: transparent url(../../images/right_on.png) no-repeat top right;
+        color: #fff;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        font-weight: normal
+    }
+    .slidingdoor .ym-hlist ul li.current_page_item,
+    .slidingdoor .ym-hlist ul li.current_page_item:hover,
+    .slidingdoor .ym-hlist ul li.current_page_item:active,
+    .slidingdoor .ym-hlist ul li.current_page_item:focus,
+    .slidingdoor .ym-hlist ul li.current_page_parent,
+    .slidingdoor .ym-hlist ul li.current_page_parent:hover,
+    .slidingdoor .ym-hlist ul li.current_page_parent:active,
+    .slidingdoor .ym-hlist ul li.current_page_parent:focus,
+    .slidingdoor .ym-hlist ul li.current-cat,
+    .slidingdoor .ym-hlist ul li.current-cat:hover,
+    .slidingdoor .ym-hlist ul li.current-cat:focus,
+    .slidingdoor .ym-hlist ul li.current-cat:active,
+    .slidingdoor .ym-hlist ul li.current-menu-item,
+    .slidingdoor .ym-hlist ul li.current-menu-item:hover,
+    .slidingdoor .ym-hlist ul li.current-menu-item:focus,
+    .slidingdoor .ym-hlist ul li.current-menu-item:active,
+    .slidingdoor .ym-hlist ul li.current-page-ancestor {
+        background: transparent url(../../images/left_on.png) no-repeat top left;
+        border: 0
+    }
+
+    /** descriptive navigation **/
+    #primarynav.descriptive, #secondarynav.descriptive {
+        border-top: 1px solid #2a3e32;
+        border-bottom: 1px solid #2a3e32;
+        margin-bottom: 1.7142em
+    }
+    .descriptive .ym-hlist {
+        background: transparent;
+        padding: 0
+    }
+    .descriptive ul li {
+        line-height: 1.6428em;
+        width: 20%
+    }
+    .descriptive ul li a {
+        font-weight: bold;
+        min-height: 46px;
+        padding: 0px 12px;
+        border-right: 1px solid #2a3e32;
+        text-transform: uppercase;
+        font-size: 0.9285em;
+        margin-right: -1px
+    }
+    .descriptive ul li a span {
+        color: #444;
+        font-size: 0.8458em;
+        padding: 0
+    }
+    .descriptive ul li.first a, .descriptive ul li:first-child a { border-left: 0 }
+    .descriptive ul li.last a, .descriptive ul li:last-child a { border-right: 0 }
+    .descriptive ul li a:focus, .descriptive ul li a:hover, .descriptive ul li a:active,
+    .descriptive ul li a:focus span, .descriptive ul li a:hover span, .descriptive ul li a:active span {
+        background: #2a3e32;
+        color: #fff
+    }
+    .descriptive ul li.current-menu-item, .descriptive ul li.current-menu-item a,
+    .descriptive ul li.current_page_parent, .descriptive ul li.current_page_parent a,
+    .descriptive ul li.current-menu-item a span, .descriptive ul li.current_page_parent a span {
+        background: transparent;
+        color: #2a3e32
+    }
+
+    /** Typography ************************************************************/
+    a, a:visited { color: #c7321a; text-decoration: none }
+    a:focus, a:hover, a:active { color: #2a3e32 }
+
+    /*vertical rhythm 14px body-fontsize; 24px line-height*/
+    h1, h2, h3, h4, h5, h6, cite.fn { font-family: 'Droid Sans', "Helvetica Neue", Helvetica, Arial, serif  }
+    h1 { font-size: 3.4285em; line-height: 1em; margin-bottom: 0.5em } /* 48px */
+    h2 { font-size: 1.7142em; line-height: 1em; margin-bottom: 1em } /* 24px */
+    h3 { font-size: 1.5em; line-height: 1.1428em; margin-bottom: 1.1428em } /* 21px */
+    h4, #comments-title, #pings-title, #reply-title, h3.fn { font-size: 1.2857em; line-height: 1.3334em; margin-bottom: 1.3334em } /* 18px */
+    h5, h6 { font-size: 1.14285em; line-height: 1.5em; margin-bottom: 1.5em } /* 16px */
+    .sidebar h5, .widget h5, #footer h5, .widget-title {
+	font-size: 1.384em;
+	line-height: 1.3334em;
+        border-bottom: 1px dashed #2a3e32;
+        margin-bottom: 1.2778em
+    }
+    .posttitle {
+        color: #c7321a;
+        padding: 0
+    }
+    p, ul, ol, dl, dd, dt, li, blockquote, pre {
+        font-size: 1em;
+        line-height: 1.7142em;
+        margin-bottom: 1.7142em
+    }
+    dd { margin: 0 0 1.7142em 24px }
+    ul ul, ul ul ul, ul ul ul ul, ol ul, ol ul ul, ol ul ul ul, ol ol, ol ol ol, li, dt { margin-bottom: 0 }
+    ul, ol, dl { margin-left: 24px }
+    li { margin-left: 24px }
+    blockquote { margin-left: 24px; margin-right: 24px; color: #364f40 }
+    acronym, abbr { border-bottom: 1px #364f40 dotted }
+    big { font-size: 1.0714em; line-height: 1.6em; margin-bottom: 1.6em }
+    small { font-size: 0.8571em; line-height: 2em; margin-bottom: 2em }
+    pre {
+        margin: 0 23px 1.6428em 23px;
+        padding: 24px;
+        overflow: auto;
+        border: 1px solid #364f40
+    }
+    table {
+        line-height: 1.7142em;
+        margin-bottom: 1.7142em;
+        border-top: none;
+        border-bottom: none
+    }
+    .widget_calendar table { margin-bottom: .923em }
+    .widget_calendar tbody td, .widget_calendar tbody th,
+    .widget_calendar thead th, .widget_calendar tfoot tr {  line-height: 2.692em }
+    th,td { padding: 0.4em }
+    .widget_calendar th, .widget_calendar td {  padding: 0 0.5em }
+    thead th, tfoot tr { background: #c7321a; color: #fff; border-bottom: 1px solid #c7321a }
+    tfoot a, tfoot a:visited { color: #fff }
+    tbody tr { background: #e4dbd2 }
+    tbody th { background: transparent; color:#2a3e32 }
+    tbody th[scope="row"], tbody th.sub {  background: transparent; color: inherit }
+    tbody th, tbody td { border-bottom: 1px solid #7d8f84 }
+    tbody tr:hover th[scope="row"],
+    tbody tr:hover tbody th.sub { background: #2a3e32; color: #fff }
+    tbody tr:hover td { background: #2a3e32;  color: #fff }
+    .widget_calendar tbody tr:hover td { background: transparent; color: inherit }
+    .widget_calendar tbody a:hover, .widget_calendar tbody a:focus, .widget_calendar tbody a:active {
+        background: #c7321a;
+        color: #fff
+    }
+    .widget_calendar #next { text-align: right }
+
+    .alignleft { float: left; display: inline; margin-right: 24px; margin-bottom: 24px }
+    .alignright  { float: right; display: inline; margin-left: 24px; margin-bottom: 24px }
+    .aligncenter, .center { display: block; text-align: center; margin: 0 auto 24px auto }
+    .alignnone { display: block; margin: 0 0 24px 0 }
+    /** we use it for the awaiting moderation message **/
+    .info {
+        background: transparent;
+        color: #c7321a;
+        padding: 0;
+        margin-bottom: 2em;
+        font-size: 0.8571em;
+        font-weight: bold;
+        line-height: 2em
+    }
+    /** we use it for post is password protected **/
+    .warning{ background: transparent; color: #c7321a; border: 1px #c7321a solid; padding: 11px 12px; margin-bottom: 1.7142em }
+    .skip_top { padding-top: 4px }
+
+    .wp-post-image, .size-medium, .size-thumbnail,
+    .attachment-thumbnail, .attachment-medium {
+        border: 1px solid #c7321a;
+        padding: 5px
+    }
+    .attachment-large { margin-bottom: 1.7142em }
+    .gallery-icon { line-height: 1px }
+
+    .post {
+        border-bottom: 1px dashed #2a3e32;
+        padding-bottom: 0;
+        margin-bottom: 1.6428em
+    }
+    .sidebar .post { margin-bottom: 1.8em }
+    .entry-meta, #siteinfo p, .comment-meta, .wp-caption-text {
+        font-size:  0.8571em;
+        line-height: 2em;
+        margin-bottom: 2em
+    }
+    .post-meta {
+        border-bottom: 1px dashed #2a3e32;
+        padding-bottom: 1.6428em
+    }
+
+    #authorbox {
+        border-bottom: 1px dashed #2a3e32;
+        margin: 0 0 1.6428em 0
+    }
+    #authorbox img.avatar {
+        padding: 5px;
+        border: 1px solid #c7321a;
+        margin: 0 24px 23px 0
+    }
+    .pagination {
+        line-height: 1.7142em;
+        margin-bottom: 1.7142em
+    }
+
+    /** Comments **/
+    .commentlist li { margin: 0 0 1.7142em 0 }
+    .commentlist li li { margin: 0 0 0 24px }
+    .children { margin-top: 1.7142em }
+    .children li { margin-left: 24px }
+    .comment-wrapper { padding: 0;  border-bottom: 1px dashed #2a3e32 }
+    .comment-meta {margin: 0 0 2em 0 }
+    .commentlist .avatar { padding: 3px; border: 1px solid #c7321a }
+    cite.fn {
+        font-size: 1.14285em;
+        line-height: 1.5em
+    }
+    .reply { margin-bottom: -1px }
+    #respond small, #cancel-comment-reply-link {
+        font-size: 1em;
+        line-height: 1em
+    }
+    #respond small { margin: 0 0 0 48px }
+    #cancel-comment-reply-link { margin-bottom: 0 }
+
+    /** Comment form **/
+    .yform {
+        background: transparent;
+        padding: 23px;
+        border: 1px dashed #c7321a;
+        margin-bottom: 1.6428em
+    }
+    .yform label { line-height: 1.7142em; color: #2a3e32 }
+    .yform sup { color: #c7321a }
+    .yform .type-text input,
+    .yform .type-text textarea,
+    .yform .type-select select { border: 1px solid #c7321a; padding: 3px .3em }
+    #s, #x-email {
+        border: 1px solid #2a3e32;
+        padding: 3px .3em
+    }
+    .yform div.type-text input:focus,
+    .yform div textarea:focus,
+    .yform div.type-text input:hover,
+    .yform div textarea:hover,
+    .yform div.type-text input:active,
+    .yform div textarea:active { border:1px #2a3e32 solid }
+    #s:hover, #s:focus, #s:active,
+    #x-email:hover, #x-email:focus, #x-email:active {
+        border:1px #c7321a solid
+    }
+    .yform div.type-text, .yform div.type-select, .yform div.type-check,
+    .yform div.type-button, .yform p.form-submit { 
+        padding: 0;
+        margin: 0 0 1.7142em 0
+    }
+    .yform .type-text input,
+    .yform .type-text textarea {
+        padding: 0.2142em 0 0.2142em 0.3em
+    }
+    .yform textarea { min-height: 13.135em }
+    .yform #submit {
+        padding: .58em 24px;
+        background: #c7321a;
+        border: 1px solid #c7321a;
+        color: #fff
+    }
+    .yform #submit:hover, .yform #submit:focus {
+        background: #2a3e32 ;
+        border-color: #2a3e32;
+        color: #fff
+    }
+    .yform #submit:active {
+        margin-top: 1px;
+        margin-bottom: -1px;
+        background: #000;
+        color: #fff
+    }
+    .yform p.form-submit { margin-bottom: .9em }
+
+    #searchsubmit, .x-newsletter-submit {
+        background: #2a3e32;
+        border: 1px solid #2a3e32;
+        color: #fff;
+        padding: 2px
+    }
+    #searchsubmit:hover, .x-newsletter-submit:hover, #searchsubmit:focus, .x-newsletter-submit:focus {
+        background: #c7321a ;
+        border-color: #c7321a;
+        color: #fff
+    }
+    #searchsubmit:active, .x-newsletter-submit:active{
+        background: #000 ;
+        border-color: #000;
+        color: #fff
+    }
+    /** sidebars and #footer 13px font-size **/
+    #main .ym-cbox-left, #main .ym-cbox-right, #footer .widget {
+        font-size: 0.928571em;
+        line-height: 1.8461em;
+	margin-bottom: 1.8461em
+    }
+    .sidebar { margin-top: 0 }
+    .sidebar li li li { margin-left: 24px }
+    .sidebar li, .sidebar li ul, #footer .widget li {
+        font-size: 1em;
+        line-height: 1.8461em
+    }
+    .sidebar li, #footer .widget li { margin-bottom: 1.8461em }
+    #footer .widget li li { margin: 0 }
+    .widget li { list-style-type: none }
+
+    .sidebar .advertise { overflow: hidden }
+    .sidebar .advertise li { float: left; margin-bottom: 24px }
+    .sidebar .advertise li a { display: table }
+    .sidebar .advertise img { padding: 9px 8px 8px 8px; border: 1px solid #2a3e32 }
+
+    /** text widget **/
+    .sidebar p, #footer .widget p { line-height: 1.8461em; margin-bottom: 1.8461em }
+
+    /** Accessible Tabs **/
+    .jquery_tabs {
+        margin:0 0 1.7142em 0
+    }
+    .jquery_tabs .tabs-list {
+        font-size: 1em;
+        margin: 0.8571em 0 0 0;
+        line-height: 1.7142em
+    }
+    .jquery_tabs .tabs-list li {
+        margin: 0 0.3em 0 0;
+    }
+    .jquery_tabs .tabs-list li a {
+        font-size: 1em;
+        line-height: 1.7142em;
+        padding: 5px 24px;
+        background: #2a3e32;
+        color: #fff;
+        border: 1px solid #2a3e32
+     }
+    .jquery_tabs .tabs-list li a:focus,
+    .jquery_tabs .tabs-list li a:hover,
+    .jquery_tabs .tabs-list li a:active {
+        background: #e4dbd2;
+        border-color: #c7321a;
+        color: #c7321a
+    }
+    .jquery_tabs .tabs-list li.current a,
+    .jquery_tabs .tabs-list li.current a:focus,
+    .jquery_tabs .tabs-list li.current a:hover,
+    .jquery_tabs .tabs-list li.current a:active {
+        background: #c7321a;
+        border-color: #c7321a;
+        color: #fff
+    }
+    .jquery_tabs .content {
+        border: 1px #c7321a solid;
+        padding: 1.6428em 23px 0 23px
+    }
+    .jquery_tabs .tab-content { margin-bottom: -2px }
+    .jquery_tabs h5 {
+        margin: 0;
+        border: 0
+    }
+
+    /** xtreme newsletter **/
+    .xtreme_newsletter label {
+        display: block;
+        margin-bottom: 1.8462em
+    }
+    #x-email { 
+        padding: 3px 6px;
+        width: 11.84em
+    }
+    
+    /** equalize Widget**/
+    .xtreme_equalize_grid_posts .post, .xtreme_equalize_pages .post {
+        border-bottom: 0;
+        padding-bottom: 0
+    }
+    .equalize .ym-gbox  { margin: 0 12px; padding: 0 }
+    .equalize .ym-gbox-left { margin: 0 12px 0 0; padding: 0 }
+    .equalize .ym-gbox-right  { margin: 0 0 0 12px; padding: 0 }
+    .equalize .subcl, .equalize .ym-gbox-right , .equalize .ym-gbox {
+        padding-bottom: 100em;
+        margin-bottom: -100em
+    }
+    .box-bottom { margin-bottom: 23px; text-align: right }
+    .box-bottom .subcl,
+    .box-bottom .ym-gbox-right ,
+    .box-bottom .ym-gbox { border-top: 1px dashed #2a3e32 }
+    .equalize .read-more a { display: block; line-height: 1.7142em }
+
+    /** Last Tweets Widget **/
+    .xtreme-tweets li {
+        border-bottom: 1px dashed #2a3e32;
+        margin-bottom: 0px;
+        min-height: 95px;
+        padding-bottom: 0
+    }
+    .xtreme-tweets li.tweet_header { min-height: 0 }
+    .xtreme-tweets .avatar { margin-right: 12px }
+    .tweet { line-height: 1em; padding: 12px 0 5px 0 }
+    .tweet-date {line-height: 1em; padding-bottom: 7px }
+    .xtreme-tweets li.preLoader {
+        background: url(../../images/loading.gif) 0 2px no-repeat;
+        padding-left: 24px
+    }
+
+    /** Xtreme Social Links Widget inside header **/
+    #header .xtreme_social_links ul { margin: 0; padding: 0 }
+    #header .xtreme_social_links li {
+        background: url(../../images/sprites.png) 0 0 no-repeat;
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        float: left;
+        margin: 0 0 0 20px
+    }
+    #header .xtreme_social_links li a {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        font-size: 0px;
+    }
+    #header .xtreme_social_links li.rss { background-position: 0 -447px }
+    #header .xtreme_social_links li.twitter { background-position: 0 -389px }
+    #header .xtreme_social_links li.facebook { background-position: 0 -331px }
+    #header .xtreme_social_links li.rss:hover { background-position: 0 -621px }
+    #header .xtreme_social_links li.twitter:hover { background-position: 0 -563px }
+    #header .xtreme_social_links li.facebook:hover { background-position: 0 -505px }
+
+    /** xtreme feature list posts widget**/
+    .xtreme_featurelist_posts { padding: 0; margin-bottom: 0 }
+    .xtreme_featurelist_posts .wp-post-image { padding: 0; border: 0 }
+    .fl-wrapper, .fl-output { background: transparent }
+    .fl-tabs li { float: left; width: 100% }
+    .fl-tabs li a, .fl-tabs li a:visited {
+        background: #c7321a;
+        border-top: 1px solid #f05939;
+        border-bottom: 1px solid #820000;
+        color: #222
+    }
+    .fl-tabs li a:hover, .fl-tabs li a:focus, .fl-tabs li a:active { color: #fff }
+    .fl-right li a { padding-left: 20px }
+    .fl-left li a { padding-right: 20px }
+    .fl-right li a.current, .fl-left li a.current {
+        background: #2a3e32;
+        border-top-color: #355f46;
+        border-bottom-color: #0f1f16
+    }
+    .fl-read-more { padding: 4px 12px }
+    .fl-read-more, .fl-read-more:visited { color: #fff; background: #c7321a }
+    .fl-read-more:hover, .fl-read-more:focus, .fl-read-more:active {
+        background: #2a3e32;
+        color: #fff
+    }
+
+    /** jFancy Slider Widget, Coin Slider Widget **/
+    .xtreme_jqfancy_slider, .xtreme_coin_slider {
+        background: transparent;
+        margin-bottom: 0
+    }
+    .jqfancy_wrapper { background: url(../../images/loading.gif) no-repeat 50% 50% }
+    .fancy-title, .coin-title {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.14285em;
+        line-height: 1.5em
+    }
+    .ft-prev, .ft-next, .cs-prev, .cs-next {
+        display: block;
+        text-indent: -9999em;
+        width: 34px;
+        height: 34px;
+        background: url('../../images/sprites.png') no-repeat
+    }
+    .ft-prev, .cs-prev { background-position: 0 -38px }
+    .ft-next, .cs-next { background-position: 0 0 }
+    .ft-buttons, .cs-buttons {
+        text-align: center !important;
+        overflow: hidden;
+        height: 24px;
+        padding: 12px 0
+    }
+    .cs-buttons { text-align: left !important }
+    .ft-button, .cs-buttons a {
+        display: inline-block;
+        line-height: 0px;
+        font-size: 0px;
+        width: 24px;
+        height: 24px;
+        background: #2a3e32;
+        border: none;
+        margin: 0 0 0 24px
+    }
+    .ft-active, a.cs-active { background: #c7321a }
+    .ft-button:focus { outline: none }
+}
+@media print {
+    body { border: none }
+}

@@ -1,0 +1,14 @@
+/**
+ * Xtreme Draft Responsive Stylesheet
+ *
+ * @copyright       Copyright 2014 Inpsyde GmbH
+ * @license         see http://marketpress.com/agb/
+ * @link            http://marketpress.com/product/xtreme/
+ * @package         xtreme-one
+**/
+@media screen and (max-width: 760px){
+
+	#header .xtreme_social_links li { margin-bottom:25px; }
+	.logo #header h1 a, .logo .blogtitle a { background-size:100% auto; }
+
+}
